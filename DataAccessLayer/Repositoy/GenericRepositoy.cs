@@ -17,25 +17,32 @@ namespace DataAccessLayer.Repositoy
             c.SaveChanges();
 
         }
-        //VİDEO 15
+       
         public T GEtByID(int id)
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            return c.Set<T>().Find(id);
         }
 
         public List<T> GetList()
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            return c.Set<T>().ToList();
         }
 
-        public void Up(T t)
+
+        public void Insert(T t)
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            c.Add(t);
+            c.SaveChanges();
         }
 
-        public void İnsert(T t)
+        public void Update(T t)
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            c.Update(t);
+            c.SaveChanges();
         }
     }
 }
