@@ -12,7 +12,9 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-NUIFV6S\\SQLEXPRESS;database=CoreProjeDB;integrated security=true");
+            //ACER  optionsBuilder.UseSqlServer("server=DESKTOP-NUIFV6S\\SQLEXPRESS;database=CoreProjeDB;integrated security=true");
+          // MASAÜSTÜ
+          optionsBuilder.UseSqlServer("server=DESKTOP-NUIFV6S\\SQLEXPRESS;database=CoreProjeDB;integrated security=true");
 
         }
         public DbSet<About> Abouts { get; set; }
